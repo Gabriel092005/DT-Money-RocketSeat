@@ -1,0 +1,52 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de sites",
+      "type": "income",
+      "price": 14000,
+      "category": "venda",
+      "createdAt": "2024-10-05T20:39:37.021Z"
+    },
+    {
+      "id": 2,
+      "description": "Hamburguer",
+      "price": 7000,
+      "category": "alimentação",
+      "createdAt": "2024-10-05T20:39:37.021Z",
+      "type": "outcome"
+    },
+    {
+      "id": 3,
+      "description": "Ignite Rocketseat",
+      "price": 6.9,
+      "category": "Educação",
+      "createdAt": "2024-10-05T20:39:37.021Z",
+      "type": "outcome"
+    },
+    {
+      "id": 4,
+      "description": "Fifa 2020",
+      "price": 700,
+      "category": "jogo",
+      "createdAt": "2024-10-05T20:39:37.021Z",
+      "type": "income"
+    },
+    {
+      "id": "3d13",
+      "description": "Desenvolvimento de App",
+      "category": "software",
+      "price": 1400,
+      "type": "income",
+      "createdAt": "2024-10-10T11:52:29.725Z"
+    },
+    {
+      "id": "77bd",
+      "description": "Desenvolvimento de App",
+      "category": "software",
+      "price": 1400,
+      "type": "income",
+      "createdAt": "2024-10-10T11:52:32.114Z"
+    }
+  ]
+}
