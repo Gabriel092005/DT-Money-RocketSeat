@@ -99,7 +99,7 @@ async function handleCreateNewTransaction(data:NewTransactionInputs)
                           <ArrowCircleDown size={24}/>
                           Saída
                         </TransactionsTypeButton>
-                        <button>teste</button>
+                   
   
                     </TransactionsType>
                     )
