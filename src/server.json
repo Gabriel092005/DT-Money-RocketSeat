@@ -17,14 +17,6 @@
       "type": "outcome"
     },
     {
-      "id": 3,
-      "description": "Ignite Rocketseat",
-      "price": 6.9,
-      "category": "Educação",
-      "createdAt": "2024-10-05T20:39:37.021Z",
-      "type": "outcome"
-    },
-    {
       "id": 4,
       "description": "Fifa 2020",
       "price": 700,
@@ -33,20 +25,20 @@
       "type": "income"
     },
     {
-      "id": "3d13",
-      "description": "Desenvolvimento de App",
-      "category": "software",
-      "price": 1400,
-      "type": "income",
-      "createdAt": "2024-10-10T11:52:29.725Z"
+      "id": "6f2b",
+      "description": "Banana Prete",
+      "category": "alimentacao",
+      "price": 123,
+      "type": "outcome",
+      "createdAt": "2024-10-10T12:54:30.357Z"
     },
     {
-      "id": "77bd",
-      "description": "Desenvolvimento de App",
-      "category": "software",
-      "price": 1400,
-      "type": "income",
-      "createdAt": "2024-10-10T11:52:32.114Z"
+      "id": "df4b",
+      "description": "Gaasd",
+      "category": "arroz",
+      "price": 8,
+      "type": "outcome",
+      "createdAt": "2024-10-10T13:06:26.399Z"
     }
   ]
 }

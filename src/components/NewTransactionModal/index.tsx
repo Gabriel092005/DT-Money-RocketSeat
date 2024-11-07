@@ -4,7 +4,9 @@ import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
 import * as z from  'zod'
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod'
-import { api } from '../../lib/axios';
+import { useContext } from 'react';
+import { TransactionsContext } from '../../contexts/TransactionsContext';
+
 
 const newTransactionFormSchema = z.object({
     description:z.string(),
@@ -16,11 +18,15 @@ const newTransactionFormSchema = z.object({
 type NewTransactionInputs = z.infer<typeof newTransactionFormSchema>;
 
 export function NewTransactionModal(){
+    const {createTransactions} = useContext(TransactionsContext)
+
+
 
     const {
         control,
         register,
         handleSubmit,
+        reset
           } = useForm<NewTransactionInputs>({
         resolver:zodResolver(newTransactionFormSchema),
         defaultValues:{
@@ -30,15 +36,16 @@ export function NewTransactionModal(){
 
 async function handleCreateNewTransaction(data:NewTransactionInputs)
 {
-    const  {description,category,price,type} = data 
+    const {category,description,price,type} = data
 
-     await api.post('/transactions',{
-          description,
-          category,
-          price,
-          type,
-          createdAt : new Date()
-     })
+    await createTransactions({
+        description,
+        category,
+        price,
+        type
+    })
+
+     reset() // quando
 }
 
 
@@ -61,7 +68,7 @@ async function handleCreateNewTransaction(data:NewTransactionInputs)
                      />
 
                     <input 
-                    type="text" 
+                    type="number" 
                     placeholder='Preço' 
                     required 
                     {...register('price',{valueAsNumber:true})}
@@ -92,6 +99,7 @@ async function handleCreateNewTransaction(data:NewTransactionInputs)
                           <ArrowCircleDown size={24}/>
                           Saída
                         </TransactionsTypeButton>
+                        <button>teste</button>
   
                     </TransactionsType>
                     )
